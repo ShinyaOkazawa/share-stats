@@ -1,0 +1,29 @@
+{
+  "name": "share-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Code.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.5",
+    "@types/node": "^12.12.11",
+    "cpx": "^1.5.0",
+    "dotenv-webpack": "^1.7.0",
+    "gas-webpack-plugin": "^1.0.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "lint": "tslint --fix src/**/*.ts",
+    "build": "npm run lint && rimraf dist && webpack && cpx src/appsscript.json dist"
+  },
+  "author": "",
+  "license": "ISC"
+}
